@@ -1,0 +1,5 @@
+The goal of this project was to provide businesses (In this case, Cloudflare Workers) with an easy platform to access customer feedback regarding their issues. In a real-world context, an application like this would shorten the customer service experience and improve customer satisfaction.
+
+I used the D1 database to analyze and store feedback data. I also used Workers AI to allow Cloudflare employees to analyze feedback using AI. Segmenting feedback into four severity buckets will allow users to prioritize urgent feedback and analyze metrics for future development. Likewise, I used the Workflows tool in Cloudflare to send urgent feedback (or all feedback) directly to a Slack channel. This will allow employees to be quickly and efficiently alerted to feedback and promote communication. 
+
+In the future, I want to add a system that allows employees to provide their own feedback and develop a mechanism that does not rely on mock data. I think a customer feedback website is very important from a business standpoint, as it provides a better long-term customer experience, which results in growth for any business. 
