@@ -1,0 +1,29 @@
+name = "feedback-triage"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+# Workers AI binding for sentiment analysis and urgency detection
+[ai]
+binding = "AI"
+
+# D1 Database for storing feedback
+[[d1_databases]]
+binding = "DB"
+database_name = "feedback_db"
+database_id = "244dcebf-1b40-4543-aa8b-c8a04a5fbb7f"
+
+# KV for caching alert thresholds and settings
+[[kv_namespaces]]
+binding = "SETTINGS"
+id = "112aa608fcbc45c6923dbadcc9e94167"
+
+# Workflows on Cloudflare
+[[workflows]]
+name = "FEEDBACK_WORKFLOW"
+class_name = "FeedbackWorkflow"
+binding = "FEEDBACK_WORKFLOW"
+
+# Environment variables for alert thresholds
+[vars]
+URGENT_ALERT_THRESHOLD = "0.7"
+CRITICAL_ALERT_THRESHOLD = "0.9"
